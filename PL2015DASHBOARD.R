@@ -10,8 +10,7 @@ library(ggplot2)
 library(plotly)
 library(bslib)
 library(scales)
-
-
+devtools::install_github("ropensci/rnaturalearthhires")
 
 # CREACIÓN BASE -----------------------------------------------------------
 
@@ -575,4 +574,7 @@ server <- function(input, output, session) {
 
 
 shinyApp(ui, server)
+
+rsconnect::writeManifest()
+
 
